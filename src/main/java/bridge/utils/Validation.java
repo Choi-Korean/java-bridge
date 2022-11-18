@@ -16,4 +16,11 @@ public class Validation {
             throw new IllegalArgumentException(error + "3~20 사이의 숫자를 입력해주세요");
         }
     }
+
+    public String checkInputMove(String move){
+        if(!(move.equals("U") || move.equals("D"))){
+            throw new IllegalArgumentException(error + "U(위) 혹은 D(아래)를 입력해주세요");
+        }
+        return move;
+    }
 }
