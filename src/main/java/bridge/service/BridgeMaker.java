@@ -23,6 +23,13 @@ public class BridgeMaker {
      */
     public List<String> makeBridge(int size) {
         List<String> bridge = new ArrayList<>();
+        for(int i = 0; i < size; i++){
+            if(this.bridgeNumberGenerator.generate() == 1){
+                bridge.add("U");
+                continue;
+            }
+            bridge.add("D");
+        }
         return bridge;
     }
 }
