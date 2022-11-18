@@ -8,7 +8,6 @@ import bridge.view.InputView;
 import bridge.view.OutputView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Controller {
@@ -21,6 +20,7 @@ public class Controller {
     Validation validation = new Validation();
     List<String> top;
     List<String> bottom;
+    private static int count = 1;
 
     public void start(){
         System.out.println("다리 건너기 게임을 시작합니다.");
@@ -55,16 +55,19 @@ public class Controller {
         }
 
         if(result.equals("O")){
+            output.printResult(this.count, result, top, bottom);
             return;
         }
 
         String command = getInputReadGameCommand(input.readGameCommand());
         if(command.equals("Q")){
+            output.printResult(this.count, result, top, bottom);
             return;
         }
 
         if(command.equals("R")){
             bg.retry();
+            this.count += 1;
             run();
         }
 
