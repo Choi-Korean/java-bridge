@@ -2,7 +2,7 @@
 
 ### Front(입출력 화면)
 - [ ] InputView
-  - [ ] 다리 길이 입력 화면
+  - [x] 다리 길이 입력 화면
   - [ ] 이동할 칸 선택 화면 화면([String] U, D)
   - [ ] 재시도 여부 선택 화면([String] R, Q)
 - [ ] OutputView
