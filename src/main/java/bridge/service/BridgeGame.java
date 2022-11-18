@@ -23,13 +23,12 @@ public class BridgeGame {
      * <p>
      * 이동을 위해 필요한 메서드의 반환 타입(return type), 인자(parameter)는 자유롭게 추가하거나 변경할 수 있다.
      */
-    public boolean move(String d) {
+    public String move(String d) {
         if(this.bridge.get(stage).equals(d)){
-            System.out.println(d + " " + this.bridge);
             stage += 1;
-            return true;
+            return "O";
         }
-        return false;
+        return "X";
     }
 
     /**
