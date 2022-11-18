@@ -33,9 +33,16 @@ public class Controller {
         if(result){
             return;
         }
-        bg.retry();
-        run();
-//        if(input.readGameCommand())
+
+        String command = getInputReadGameCommand(input.readGameCommand());
+        if(command.equals("Q")){
+            return;
+        }
+
+        if(command.equals("R")){
+            bg.retry();
+            run();
+        }
 
     }
 
@@ -45,5 +52,9 @@ public class Controller {
 
     public String getInputReadMoving(String input){
         return validation.checkInputMove(input);
+    }
+
+    public String getInputReadGameCommand(String input){
+        return validation.checkInputCommand(input);
     }
 }

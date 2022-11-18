@@ -23,4 +23,11 @@ public class Validation {
         }
         return move;
     }
+    
+    public String checkInputCommand(String command){
+        if(!(command.equals("R") || command.equals("Q"))){
+            throw new IllegalArgumentException(error + "R(재시작) 혹은 Q(중단)를 입력해주세요");
+        }
+        return command;
+    }
 }
